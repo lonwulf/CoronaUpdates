@@ -9,4 +9,7 @@ interface ApiInterface {
 
     @GET("v1/stats")
     fun getCoronaUpdates(@Query("country")country:String):Call<CoronaResponseDTO>
+
+    @GET("v1/stats")
+    suspend fun getCoronaUpdatesWithCoroutines(@Query("country")country:String):CoronaResponseDTO
 }
